@@ -2,6 +2,7 @@ from django.shortcuts import render,HttpResponse, redirect
 from . import models
 from . import forms
 from django.contrib import messages
+from django.views.generic.list import ListView
 
 # This is for Models Form in django
 
@@ -16,9 +17,15 @@ def create_student(request):
         form = forms.StudentForm()
     return render(request, 'student/create_student.html', {'form': form})
 
-def home(request):
-    students = models.Student.objects.all()
-    return render(request, 'student/index.html', {'students' : students})
+# def home(request):
+#     students = models.Student.objects.all()
+#     return render(request, 'student/index.html', {'students' : students})
+
+class StudentListView(ListView):
+    model = models.Student
+    template_name = "student/index.html"
+    context_object_name = 'students'
+
 
 def update_student(request, id):
     student = models.Student.objects.get(id=id)

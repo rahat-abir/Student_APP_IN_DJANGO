@@ -98,9 +98,13 @@ Student_APP_IN_DJANGO/
 ## 🧑‍💻 Usage
 
 -Go to the home page to view student profiles.
+
 -Click "Add Student" to create a new profile.
+
 -Use the "Edit" button to modify student data.
+
 -Use the "Delete" button to remove a student.
+
 
 ---
 

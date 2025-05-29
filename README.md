@@ -57,8 +57,9 @@ Student_APP_IN_DJANGO/
 
 
 - **🏠 Home Page**
+  
+  ![Home Page](https://github.com/user-attachments/assets/06a44967-d6d9-48f7-b390-ac7abf614535)
 
-  ![Home Page](path/to/homepage_screenshot.png)
 
 - **➕ Create Student Profile**
 

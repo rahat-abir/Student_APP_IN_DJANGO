@@ -62,12 +62,18 @@ Student_APP_IN_DJANGO/
 
 
 - **➕ Create Student Profile**
+  ![Create Student Profile](https://github.com/user-attachments/assets/df35f8f1-6d8c-4d22-a828-03b00bf1b5ec)
 
-  ![Create Profile](path/to/create_profile_screenshot.png)
 
-- **✏️ Edit Student Profile**
+- **✏️ User Login**
 
-  ![Edit Profile](path/to/edit_profile_screenshot.png)
+  ![User Login](https://github.com/user-attachments/assets/c042701e-af61-4a5d-9ab8-15a221050c3e)
+  
+- **✏️ User Signup**
+
+  ![User Signup](https://github.com/user-attachments/assets/6b965f92-8628-49fa-b10d-eae88c7e708b)
+
+
 
 ---
 

@@ -3,6 +3,9 @@ from . import models
 from . import forms
 from django.contrib import messages
 from django.views.generic.list import ListView
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import authenticate, login, logout
+
 
 # This is for Models Form in django
 
@@ -49,6 +52,44 @@ def delete_student(request, id):
 
 
 
+
+
+def signup(request):
+    if request.method == 'POST':
+        form = forms.SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.add_message(request, messages.SUCCESS, 'Account created successfully.')
+            return redirect('home')
+    else:
+        form = forms.SignUpForm()
+
+    return render(request, 'student/auth_form.html', {'form': form})
+
+
+def user_login(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(data = request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username = username, password = password)
+
+            if user is not None:
+                login(request, user)
+                messages.add_message(request, messages.SUCCESS, 'Login Successful')
+                return redirect('home')
+            else:
+                messages.add_message(request, messages.ERROR, 'Invalid user or password')
+    else:
+            form = AuthenticationForm()
+    return render(request, 'student/auth_form.html', {'form' : form})
+
+
+def user_logout(request):
+    logout(request)
+    messages.add_message(request, messages.SUCCESS, 'Logout Successful')
+    return redirect('home')
 
 # This is for HTML form...........................
 # def home(request):

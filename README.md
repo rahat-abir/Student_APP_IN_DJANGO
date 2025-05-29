@@ -26,17 +26,29 @@ A simple Django web application for managing student profiles with Create, Read,
 ## 📁 Project Structure
 
 Student_APP_IN_DJANGO/
+
 ├── student_management/ # Main Django app
+
 │ ├── migrations/ # Database migrations
+
 │ ├── templates/ # HTML templates
+
 │ ├── static/ # Static files (CSS, JS, images)
+
 │ ├── models.py # Student model
+
 │ ├── views.py # View functions
+
 │ ├── urls.py # App-specific URLs
+
 │ └── admin.py # Admin panel registration
+
 ├── db.sqlite3 # SQLite database
+
 ├── manage.py # Django management script
+
 └── README.md # Project documentation
+
 
 
 ---
@@ -66,3 +78,31 @@ Student_APP_IN_DJANGO/
    ```bash
    git clone https://github.com/rahat-abir/Student_APP_IN_DJANGO.git
    cd Student_APP_IN_DJANGO
+2. **(Optional) Create and activate a virtual environment**
+   ```bash
+   python -m venv myenv
+   source myenv/bin/activate  # On Windows: myenv\Scripts\activate
+3. **Install dependencies**
+   ```bash
+   pip install django
+4. **Apply database migrations**
+   ```bash
+   python manage.py migrate
+5. **Run the development server**
+   ```bash
+   python manage.py runserver
+6. **Visit in browser**
+   ```bash
+   http://127.0.0.1:8000/home
+
+## 🧑‍💻 Usage
+
+-Go to the home page to view student profiles.
+-Click "Add Student" to create a new profile.
+-Use the "Edit" button to modify student data.
+-Use the "Delete" button to remove a student.
+
+---
+
+
+
